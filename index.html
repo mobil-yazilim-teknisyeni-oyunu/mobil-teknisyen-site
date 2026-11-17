@@ -61,10 +61,11 @@
         }
 
         .nav-logo {
-            height: 100%; /* Container yüksekliğine uy */
+            height: 50px;
             width: auto;
-            max-width: 200px;
-            object-fit: contain;
+            transform: scale(4); /* Logoyu 4 kat büyütür */
+            transform-origin: left center; /* Soldan büyümesini sağlar */
+            margin-left: 10px; /* Büyüyünce sola yapışmasın diye */
         }
 
         /* Hero (Giriş) Bölümü */
