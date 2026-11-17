@@ -66,6 +66,16 @@
             gap: 10px;
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-logo {
+            height: 45px; /* Logonun yüksekliği. İstersen 35-50 arası deneyebilirsin */
+            width: auto;
+        }
+
         /* Hero / Header */
         header {
             padding: 4rem 1.5rem 3rem 1.5rem;
@@ -443,10 +453,10 @@
 
     <!-- Üst Menü -->
     <nav>
-        <div class="logo-text">
-            <i class="fa-solid fa-mobile-screen-button"></i> TEKNOSERV
+        <div class="logo-container">
+            <img src="logo.svg" alt="TeknoServ Oyun Logo" class="nav-logo">
         </div>
-        <div style="font-size: 0.85em; color: var(--text-secondary); font-weight: 600;">v0.1 BETA</div>
+        <div style="font-size: 0.85em; color: var(--text-secondary); font-weight: 600;">v1.0.0 BETA</div>
     </nav>
 
     <!-- Header / Hero -->
