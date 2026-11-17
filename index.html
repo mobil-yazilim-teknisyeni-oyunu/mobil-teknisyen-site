@@ -11,17 +11,16 @@
     
     <style>
         :root {
-            /* Oyunun Renk Paleti */
-            --bg-body: #121418; /* Koyu Gri */
-            --bg-card: #1e2228; /* Grafit */
+            --bg-body: #121418;
+            --bg-card: #1e2228;
             --bg-card-hover: #252a31;
             --border-color: #343943;
-            --text-primary: #e9e5db; /* Kırık Beyaz */
-            --text-secondary: #8a8478; /* Soluk Gri */
-            --brand-color: #8fac86; /* Soluk Yeşil */
+            --text-primary: #e9e5db;
+            --text-secondary: #8a8478;
+            --brand-color: #8fac86;
             --brand-hover: #a4c49b;
-            --accent-orange: #d8a35f; /* Yumuşak Turuncu */
-            --accent-blue: #8aa4b8; /* Nötr Mavi */
+            --accent-orange: #d8a35f;
+            --accent-blue: #8aa4b8;
         }
 
         * {
@@ -35,52 +34,40 @@
             background-color: var(--bg-body);
             color: var(--text-primary);
             line-height: 1.6;
-            /* Hafif teknolojik ızgara deseni */
             background-image: 
                 linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
             background-size: 40px 40px;
         }
 
-        /* Üst Menü */
+        /* Üst Menü (Navbar) */
         nav {
-            padding: 15px 30px;
+            padding: 15px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid var(--border-color);
-            background: rgba(18, 20, 24, 0.9);
+            background: rgba(18, 20, 24, 0.95);
             backdrop-filter: blur(5px);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
-        .logo-text {
-            font-size: 1.2em;
-            font-weight: 800;
-            color: var(--brand-color);
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
         .logo-container {
             display: flex;
             align-items: center;
+            height: 50px; /* Menü yüksekliği */
         }
 
         .nav-logo {
-            height: 120px; /* Logoyu büyüttük */
+            height: 100%; /* Container yüksekliğine uy */
             width: auto;
-            max-width: 400px;
-            margin-top: -30px; /* Navbar'ı çok fazla şişirmemesi için yukarı çektik */
-            margin-bottom: -30px; /* Alt boşluğu dengeledik */
-        }
+            max-width: 200px;
+            object-fit: contain;
         }
 
-        /* Hero / Header */
+        /* Hero (Giriş) Bölümü */
         header {
             padding: 4rem 1.5rem 3rem 1.5rem;
             text-align: center;
@@ -215,6 +202,7 @@
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
+            color: var(--text-primary);
         }
 
         .download-buttons {
@@ -237,18 +225,14 @@
             border: 2px solid transparent;
         }
 
-        .btn-win {
-            background-color: var(--brand-color);
-        }
+        .btn-win { background-color: var(--brand-color); }
         .btn-win:hover {
             background-color: transparent;
             color: var(--brand-color);
             border-color: var(--brand-color);
         }
 
-        .btn-lin {
-            background-color: var(--accent-orange);
-        }
+        .btn-lin { background-color: var(--accent-orange); }
         .btn-lin:hover {
             background-color: transparent;
             color: var(--accent-orange);
@@ -458,7 +442,7 @@
     <!-- Üst Menü -->
     <nav>
         <div class="logo-container">
-            <img src="logo.svg" alt="TeknoServ Oyun Logo" class="nav-logo">
+            <img src="logo.svg" alt="TeknoServ Logo" class="nav-logo">
         </div>
         <div style="font-size: 0.85em; color: var(--text-secondary); font-weight: 600;">v1.0.0 BETA</div>
     </nav>
@@ -476,7 +460,7 @@
         <!-- İstatistikler -->
         <div class="stats-bar">
             <div class="stat-item">
-                <div class="stat-number">v0.1</div>
+                <div class="stat-number">v1.0.0</div>
                 <div class="stat-label">Sürüm</div>
             </div>
             <div class="stat-item">
@@ -513,7 +497,6 @@
             Oyunu İndir ve Onarmaya Başla
         </div>
         <div class="download-buttons">
-            <!-- WINDOWS LİNKİNİ BURAYA YAPIŞTIR -->
             <a href="https://bzzhr.co/xtg7mjzwt3l6" class="btn-dl btn-win" target="_blank">
                 <i class="fa-brands fa-windows fa-2x"></i>
                 <div class="btn-info">
@@ -521,8 +504,7 @@
                     <small>Çalıştırılabilir (.exe)</small>
                 </div>
             </a>
-            <!-- LINUX LİNKİNİ BURAYA YAPIŞTIR -->
-            <a href="https://bzzhr.co/g42rse29jlxb" class="btn-dl btn-lin" target="_blank">
+            <a href="https://bzzhr.co/xtg7mjzwt3l6" class="btn-dl btn-lin" target="_blank">
                 <i class="fa-brands fa-linux fa-2x"></i>
                 <div class="btn-info">
                     Linux İçin İndir
@@ -570,7 +552,7 @@
             </div>
             <div class="faq-card">
                 <h4><i class="fa-solid fa-circle-question"></i> Hata buldum veya önerim var, nereye bildirebilirim?</h4>
-                <p>Aşağıda yer alan Instagram adresimizden DM üzerinden karşılaştığınız hataları ve önerileri bize iletebilirsiniz, Geri bildirimleriniz bizim için çok önemlidir</p>
+                <p>Aşağıda yer alan Instagram adresimizden DM üzerinden karşılaştığınız hataları ve önerileri bize iletebilirsiniz.</p>
             </div>
         </div>
 
@@ -614,14 +596,14 @@
             <h3 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1rem;">Bize Ulaşın</h3>
             <div class="social-buttons">
                 <a href="https://www.instagram.com/mobil_yazilim_teknisyeni_oyunu/?hl=tr" class="btn-social" target="_blank">
-                    <i class="fa-brands fa-instagram"></i> Instagram
+                    <i class="fa-brands fa-instagram"></i> Instagram DM
                 </a>
             </div>
         </div>
     </div>
 
     <footer>
-        <p>Geliştirici: <strong>Adnan</strong> · Lisans: Kapalı Kaynak (Ücretsiz Dağıtım)</p>
+        <p>Geliştirici: <strong>[Senin Adın]</strong> · Lisans: Kapalı Kaynak (Ücretsiz Dağıtım)</p>
         <p style="margin-top: 10px;">Tüm markalar ve modeller kurgusaldır. Gerçek şirketlerle bağlantısı yoktur.</p>
         <p style="margin-top: 20px; font-size: 0.75rem; color: #6b7280;">&copy; 2026 Mobil Yazılım Teknisyeni. Tüm Hakları Saklıdır.</p>
     </footer>
